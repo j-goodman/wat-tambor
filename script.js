@@ -22,6 +22,10 @@ var startgame = function () {
   video = document.getElementsByClassName('video')[0];
   start.innerText = "Mash the left and right arrow keys.";
   start.onclick = null;
+  error.style.display = 'none';
+  video.style.display = 'block';
+  error.pause();
+  error.currentTime = 0;
   video.play();
   position.x = Math.random() - 0.5;
   position.accel = 0;
