@@ -39,7 +39,7 @@ var startgame = function () {
     if (position.accel > 8) { position.accel = 8; }
     if (position.accel < -8) { position.accel = -8; }
     position.x += position.accel;
-    if (position.x > 50 || position.x < -50) {
+    if (position.x > 36 || position.x < -36) {
       lose();
     }
     needle.style.transform = 'translateX(' + position.x + 'px)';
