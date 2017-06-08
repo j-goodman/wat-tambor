@@ -23,8 +23,8 @@ var startgame = function () {
   start.innerText = "Mash the left and right arrow keys.";
   start.onclick = null;
   video.play();
-  needle.x = Math.random() - 0.5;
-  position.x = 0;
+  position.x = Math.random() - 0.5;
+  position.accel = 0;
   starttime = new Date().getTime() / 1000;
   interval = window.setInterval(function () {
     var needle;
@@ -32,14 +32,14 @@ var startgame = function () {
     needle = document.getElementsByClassName('needle')[0];
     counter = document.getElementsByClassName('counter')[0];
     if (position.x > 0) {
-      position.accel -= Math.random() * 10 - 3;
+      position.accel += Math.random() * 5 - 2;
     } else {
-      position.accel += Math.random() * 10 - 3;
+      position.accel -= Math.random() * 5 - 2;
     }
     if (position.accel > 8) { position.accel = 8; }
     if (position.accel < -8) { position.accel = -8; }
     position.x += position.accel;
-    if (position.x > 36 || position.x < -36) {
+    if (position.x > 60 || position.x < -60) {
       lose();
     }
     needle.style.transform = 'translateX(' + position.x + 'px)';
@@ -49,9 +49,9 @@ var startgame = function () {
 
 onkeydown = function (event) {
   if (event.keyCode === 37) { // left
-    position.x -= 6;
+    position.x -= 14;
   } else if (event.keyCode === 39) { // right
-    position.x += 6;
+    position.x += 14;
   }
 };
 
