@@ -32,9 +32,9 @@ var startgame = function () {
     needle = document.getElementsByClassName('needle')[0];
     counter = document.getElementsByClassName('counter')[0];
     if (position.x > 0) {
-      position.accel -= Math.random() * 6 - 2.2;
+      position.accel -= Math.random() * 10 - 3;
     } else {
-      position.accel += Math.random() * 6 - 2.2;
+      position.accel += Math.random() * 10 - 3;
     }
     if (position.accel > 8) { position.accel = 8; }
     if (position.accel < -8) { position.accel = -8; }
