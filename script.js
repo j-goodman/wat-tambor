@@ -32,9 +32,9 @@ var startgame = function () {
     needle = document.getElementsByClassName('needle')[0];
     counter = document.getElementsByClassName('counter')[0];
     if (position.x > 0) {
-      position.accel -= Math.random() * 5 - 2;
+      position.accel -= Math.random() * 6 - 2.2;
     } else {
-      position.accel += Math.random() * 5 - 2;
+      position.accel += Math.random() * 6 - 2.2;
     }
     if (position.accel > 8) { position.accel = 8; }
     if (position.accel < -8) { position.accel = -8; }
@@ -49,9 +49,9 @@ var startgame = function () {
 
 onkeydown = function (event) {
   if (event.keyCode === 37) { // left
-    position.x -= 8;
+    position.x -= 6;
   } else if (event.keyCode === 39) { // right
-    position.x += 8;
+    position.x += 6;
   }
 };
 
