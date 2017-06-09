@@ -14,9 +14,8 @@ h2 {
 }
 
 .video, .error-video {
-  background: #00a;
   bottom: 50%;
-  height: 200px;
+  height: 300px;
   width: auto;
 }
 
@@ -46,14 +45,14 @@ h2 {
   height: 100px;
   width: 100px;
   position: absolute;
-  top: 50%;
+  top: 64%;
 }
 
 .needle {
   border-radius: 50%;
   height: 100px;
   position: absolute;
-  top: 50%;
+  top: 64%;
   width: 100px;
 }
 
